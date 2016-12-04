@@ -2,7 +2,9 @@
 
 <h1>Dailycashes</h1>
 
-<table>
+<div class="media">
+<div class="media-body">
+<table class= "table table-hover">
   <thead>
     <tr>
       <th>Date</th>
@@ -30,14 +32,15 @@
         <td><%= dailycash.driverpaid %></td>
         <td><%= dailycash.lodgement %></td>
         <td><%= dailycash.overunder %></td>
-        <td><%= link_to 'Show', dailycash %></td>
-        <td><%= link_to 'Edit', edit_dailycash_path(dailycash) %></td>
-        <td><%= link_to 'Destroy', dailycash, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', dailycash, class: 'btn btn-mini'%></td>
+        <td><%= link_to 'Edit', edit_dailycash_path(dailycash), class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Destroy', dailycash, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
 <%= link_to 'New Dailycash', new_dailycash_path %>
